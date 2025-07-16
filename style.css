@@ -1,0 +1,99 @@
+/* Importar una fuente más amigable */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Fondo de gradiente suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.bmi-calculator {
+    border-radius: 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.bmi-calculator:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-title {
+    color: #00796b; /* Un verde azulado profesional */
+    font-weight: 700;
+}
+
+.input-group-text {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem !important;
+    font-size: 1.2rem;
+    padding: 0 15px;
+}
+
+.form-control {
+    border-left: none;
+    border-radius: 0 0.5rem 0.5rem 0 !important;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 121, 107, 0.25);
+    border-color: #4db6ac;
+}
+
+.btn-primary {
+    background-color: #00796b;
+    border-color: #00796b;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    border-color: #004d40;
+    transform: scale(1.02);
+}
+
+/* Estilos para el contenedor del resultado */
+#resultado {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#resultado.visible {
+    opacity: 1; /* Hacer visible con animación */
+    transform: translateY(0);
+}
+
+.resultado-box {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* --- COLORES DE ESTADO --- */
+/* Verde = Normal */
+.verde {
+    background-color: #2e7d32; /* Verde oscuro */
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+}
+
+/* Amarillo = Riesgo (Bajo peso o Sobrepeso) */
+.amarillo {
+    background-color: #f9a825; /* Amarillo mostaza */
+    box-shadow: 0 4px 15px rgba(249, 168, 37, 0.4);
+}
+
+/* Rojo = Peligro (Obesidad) */
+.rojo {
+    background-color: #c62828; /* Rojo intenso */
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.4);
+}
